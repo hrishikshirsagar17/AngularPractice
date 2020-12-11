@@ -1,0 +1,34 @@
+
+<input (input)="getValue($event)" placeholder="Enter name to search">
+  <br>
+  <br>
+  <button (click)="getProductByName()">Check Product</button>
+  <br>
+  <br>
+
+
+    <div *ngIf="flag2">
+      <table>
+        <thead> 
+         <tr>
+           <th>Index</th>
+           <th>Product-id</th>
+           <th>Product-name</th>
+           <th>Product-price</th>
+           <th>Product-Discount</th>
+         </tr>
+         </thead>
+         <tbody>
+           <tr *ngFor="let p of temparr; let i=index">
+             <td>{{i+1}}</td>
+             <td>{{p.pid}}</td>
+             <td>{{p.pname}}</td>
+             <td>{{p.price}}</td>
+             <td>{{p.discount}}</td>
+           </tr>
+         </tbody>
+      </table>
+    </div>
+    
+
+

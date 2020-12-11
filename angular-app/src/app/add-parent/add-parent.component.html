@@ -1,0 +1,12 @@
+<!-- <app-add-child [msg]="msg"></app-add-child> -->
+<div>
+    <h2>Search Product</h2>
+    
+    <app-add-child [flag2]=flag (p)='onNotify($event)'> </app-add-child>
+    <div *ngIf="flag1">
+            <div *ngIf="flag; else elseBlock">
+               <h3> Product Available</h3>
+            </div>
+            <ng-template #elseBlock>Product Not Available</ng-template>
+    </div>
+</div>
